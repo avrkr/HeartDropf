@@ -7,6 +7,8 @@ import Dashboard from './pages/Dashboard';
 import Feed from './pages/Feed';
 import CreateConfession from './pages/CreateConfession';
 import VerifyEmail from './pages/VerifyEmail';
+import ConfessionDetail from './pages/ConfessionDetail';
+import AdminPanel from './pages/AdminPanel';
 import { AuthProvider } from './context/AuthContext';
 
 function App() {
@@ -21,6 +23,8 @@ function App() {
         <Route path="/feed" element={<Feed />} />
         <Route path="/create" element={<CreateConfession />} />
         <Route path="/verify-email/:token" element={<VerifyEmail />} />
+        <Route path="/confession/:id" element={<ConfessionDetail />} />
+        <Route path="/admin" element={<AdminPanel />} />
       </Routes>
     </AuthProvider>
   );

@@ -27,6 +27,11 @@ const Navbar = () => {
                             <Link to="/dashboard">
                                 <User className="icon-sm" /> Dashboard
                             </Link>
+                            {user.role === 'admin' && (
+                                <Link to="/admin" style={{ color: 'var(--primary-color)', fontWeight: '600' }}>
+                                    Admin Panel
+                                </Link>
+                            )}
                             <button onClick={handleLogout} className="btn-link">
                                 <LogOut className="icon-sm" /> Logout
                             </button>
